@@ -1,0 +1,28 @@
+.bigpic img {
+  height: 100%;
+  box-shadow: 1px 3px 10px black;
+}
+
+.bigpic {
+  height: 500px;
+}
+
+.pic img {
+  height: 100%;
+  margin: 0 5px 10px 5px;
+  border-radius: 2px;
+  box-shadow: 5px 2px 2px black;
+}
+
+.pic img:hover {
+  box-shadow: 10px 5px 5px black;
+}
+
+.over {
+  opacity: 0;
+}
+
+.pic {
+  height: 50px;
+  margin-top: 20px;
+}
