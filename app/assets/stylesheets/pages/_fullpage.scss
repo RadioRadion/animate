@@ -263,17 +263,17 @@ html.fp-enabled,
   /* Defining each sectino background and styles
   * --------------------------------------- */
   #slide1{
-    background-image: url(../assets/photos/thumb/creation/abstrait/01.jpg);
+    background-image: url(asset-path("photos/thumb/creation/abstrait/01.jpg"));
   }
   #slide2{
-    background-image: url(../assets/photos/thumb/design/05.jpg);
+    background-image: url(asset-path("photos/thumb/design/05.jpg"));
   }
   #slide3{
-    background-image: url(../assets/photos/thumb/humain/portrait/08.jpg);
+    background-image: url(asset-path("photos/thumb/humain/portrait/08.jpg"));
   }
   #slide4{
-    background-image: url(../assets/photos/thumb/nature/04.jpg);
+    background-image: url(asset-path("photos/thumb/nature/04.jpg"));
   }
   #slide5{
-    background-image: url(../assets/photos/thumb/paysage/urbain/03.jpg);
+    background-image: url(asset-path("photos/thumb/paysage/urbain/03.jpg"));
   }
