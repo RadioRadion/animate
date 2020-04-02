@@ -40,5 +40,8 @@ $(document).ready(function() {
     setTimeout(function() {
         $('body').addClass('loaded');
     }, 3500);
-
 });
+
+// setTimeout(function() {
+//   fullpage_api.silentMoveTo(2);
+//   }, 5000);

@@ -17,13 +17,14 @@
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
   </head>
 
-  <body>
+  <body onload=' location.href="#secondPage" '>
     <%= yield %>
     <div class="cursor"></div>
     <%= javascript_include_tag 'application' %>
+    <%= javascript_pack_tag 'scrolloverflow' %>
+    <%= javascript_pack_tag 'fullpage' %>
     <%= javascript_pack_tag 'application' %>
     <%= javascript_pack_tag 'cursor' %>
-    <%= javascript_pack_tag 'fullpage' %>
     <%= javascript_pack_tag 'gallerie' %>
     <%= javascript_pack_tag 'terminal' %>
 
@@ -32,12 +33,14 @@
  -->
     <script type="text/javascript">
             var myFullpage = new fullpage('#fullpage', {
-        sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
+        sectionsColor: ['#000000', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
         anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
         navigation:true,
+        slidesNavigation: true,
         navigationTooltips: ['', 'f l a s h', 't v'],
         showActiveTooltip: true,
         loopBottom: true,
+        // scrollOverflow: true,
         scrollingSpeed: 1700,
         menu: '#menu',
         licenseKey: '7D72BD02-D9324668-A20A7371-BA347154',

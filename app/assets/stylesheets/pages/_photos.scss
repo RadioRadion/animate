@@ -1,3 +1,13 @@
 .photos {
   width: 200px;
 }
+
+.menuslide {
+  text-align: center;
+  transition: opacity 0.2s ease-in;
+  width: auto;
+  opacity: 1;
+  color: white;
+  position: absolute;
+  bottom: 20px;
+}
