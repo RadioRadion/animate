@@ -8,6 +8,11 @@
         src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
         crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      function goToAnchor() {
+        fullpage_api.silentMoveTo(2,1);
+      }
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.5/fullpage.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet">
     <title>TODO</title>
@@ -17,7 +22,7 @@
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
   </head>
 
-  <body onload=' location.href="#secondPage" '>
+  <body onload=goToAnchor()>
     <%= yield %>
     <div class="cursor"></div>
     <%= javascript_include_tag 'application' %>
@@ -40,7 +45,7 @@
         navigationTooltips: ['', 'f l a s h', 't v'],
         showActiveTooltip: true,
         loopBottom: true,
-        // scrollOverflow: true,
+        scrollOverflow: true,
         scrollingSpeed: 1700,
         menu: '#menu',
         licenseKey: '7D72BD02-D9324668-A20A7371-BA347154',
@@ -54,6 +59,8 @@
                 destination:destination,
                 direction: direction
             };
+
+            // Pour faire arriver les flèches de côté tkrl
             if (params.destination.anchor === "secondPage") {
               gsap.from(".fp-prev", {duration: 6, x: -100, opacity: 0, scale: 0.5});
               gsap.from(".fp-next", {duration: 6, x: 100, opacity: 0, scale: 0.5});
@@ -62,8 +69,19 @@
               gsap.from(".fp-prev", {duration: 6, x: -100, opacity: 0, scale: 0.5});
               gsap.from(".fp-next", {duration: 6, x: 100, opacity: 0, scale: 0.5});
             }
+            // pour enlever le texte du terminal quand on quitte le lieu
             const terminal = document.querySelector('#AboutDevTypeText');
             terminal.innerHTML = "";
+
+            if (params.destination.anchor === "secondPage") {
+              if (params.origin.anchor === "firstPage") {
+                fullpage_api.moveSlideRight();
+              }
+              if (params.origin.anchor === "3rdPage") {
+                fullpage_api.moveSlideRight();
+              }
+            }
+
         },
         onSlideLeave: function(section, origin, destination, direction){
             var params = {
@@ -72,6 +90,7 @@
                 destination: destination,
                 direction: direction
             };
+            console.log(params);
 
         },
         afterRender: function(){
