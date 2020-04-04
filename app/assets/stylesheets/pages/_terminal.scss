@@ -3,7 +3,7 @@ body {
 }
 
 span {
-  color: yellow;
+  color: white;
   font-family: monospace;
 }
 
@@ -12,7 +12,7 @@ span {
   margin-bottom: -2px;
   height: 15px;
   margin-left: -5px;
-  border-left: 7px solid yellow;
+  border-left: 7px solid white;
   animation: blinker 0.9s steps(2, start) infinite;
 }
 

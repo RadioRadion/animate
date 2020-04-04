@@ -13,11 +13,11 @@ import "bootstrap";
 gsap.from(".animate", {duration: 3, x: 100});
 
 setTimeout(function() {
-  gsap.from("#fp-nav", {duration: 25, x: 300, opacity: 0, scale: 0.5});
+  gsap.from("#fp-nav", {duration: 25, x: 300, opacity: 0});
   }, 0);
 
 setTimeout(function() {
-  gsap.from("#logo", {duration: 9, x: 300, opacity: 0, scale: 0.5});
+  gsap.from("#logo", {duration: 9, opacity: 0, scale: 0.5});
   }, 3500);
 
 //VIDEO CALLBACK
