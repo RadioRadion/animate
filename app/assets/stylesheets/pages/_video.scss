@@ -35,9 +35,11 @@
   #section0 .layer{
     position: absolute;
     z-index: 4;
-    width: 100%;
     left: 0;
+    right: 0;
     top: 12%;
+    margin: auto;
+    width: 33%;
 
     /*
     * Preventing flicker on some browsers

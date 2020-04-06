@@ -24,12 +24,12 @@
 
   <body onload=goToAnchor()>
     <%= yield %>
-    <div class="cursor"></div>
+<!--     <div class="cursor"></div> -->
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'scrolloverflow' %>
     <%= javascript_pack_tag 'fullpage' %>
     <%= javascript_pack_tag 'application' %>
-    <%= javascript_pack_tag 'cursor' %>
+    <%#= javascript_pack_tag 'cursor' %>
     <%= javascript_pack_tag 'gallerie' %>
     <%= javascript_pack_tag 'terminal' %>
 
@@ -90,7 +90,7 @@
                 destination: destination,
                 direction: direction
             };
-            console.log(params);
+            // console.log(params);
 
         },
         afterRender: function(){

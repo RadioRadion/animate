@@ -131,12 +131,20 @@ html.fp-enabled,
 .fp-slidesNav.fp-bottom {
     bottom: 17px;
 }
+.fp-bottom ul {
+  width: 15%;
+  left: 0;
+  right: 0;
+  position: absolute;
+  margin: auto;
+  bottom: -12px;
+}
 .fp-slidesNav.fp-top {
     top: 17px;
 }
 #fp-nav ul,
 .fp-slidesNav ul {
-  margin: 0;
+  // margin: 0;
   padding: 0;
 }
 #fp-nav ul li,
@@ -280,5 +288,9 @@ html.fp-enabled,
   }
   #slide5{
     // background-image: url(asset-path("photos/thumb/paysage/urbain/03.jpg"));
+    background-color: black;
+  }
+  #slide2a{
+    background-image: url(asset-path("photos/thumb/humain/portrait/08.jpg"));
     background-color: black;
   }
