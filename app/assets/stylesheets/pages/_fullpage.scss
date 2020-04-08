@@ -270,6 +270,10 @@ html.fp-enabled,
 
   /* Defining each sectino background and styles
   * --------------------------------------- */
+  #slide0{
+    // background-image: url(asset-path("photos/thumb/creation/abstrait/01.jpg"));
+    background-color: black;
+  }
   #slide1{
     // background-image: url(asset-path("photos/thumb/creation/abstrait/01.jpg"));
     background-color: black;

@@ -24,15 +24,15 @@ setTimeout(function() {
 const video = document.querySelector('#section0 video');
 const terminal = document.querySelector('#AboutDevTypeText');
 
-document.addEventListener('keydown', e => {
-
-if (e.key === "y" || e.key === "Y") {
-  terminal.innerHTML = "GO ↓↓↓ ";
-  }
-if (e.key === "n" || e.key === "N") {
-  video.pause();
-  }
-})
+// réagir en cliquant sur une touche à l'écran d'accueil
+// document.addEventListener('keydown', e => {
+// if (e.key === "y" || e.key === "Y") {
+//   terminal.innerHTML = "↑ flash ↓ tv ← melodies → note";
+//   }
+// if (e.key === "n" || e.key === "N") {
+//   video.pause();
+//   }
+// })
 
 // Callback jquery pour set le temps du loader
 $(document).ready(function() {

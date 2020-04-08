@@ -1,6 +1,6 @@
 var data = [
   {
-    AboutDevTypeText: "<span>AGONE STUDIO<br/><br/>Let's dive onto the Agone's works, you'll find a lot<br/>of rarities like photos, homemade songs and many more...</span><br/><br/><br/><span>Learn from my universe ?<br/> Y / N</span><br/>"
+    AboutDevTypeText: "<span>AGONE STUDIO<br/><br/>↑ flash ↓ tv ← melodies → note</span><br/>"
   }
 ];
 

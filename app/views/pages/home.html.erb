@@ -129,7 +129,7 @@
 
     <div class="slide" id="slide1">
       <div class="layer">
-      <%= image_tag "logos/girouette.png", alt: "abstrait", id: "logo" %>
+      <%#= image_tag "logos/girouette.png", alt: "abstrait", id: "logo" %>
         <br><br><br>
         <span id="AboutDevTypeText" class="typeing"></span><span class='blinker'>&#32;</span>
       </div>
@@ -137,18 +137,26 @@
     </div>
 
     <div class="slide" id="slide2a">
-      <form action="https://formspree.io/xrgapyzy" method="POST">
-        <label>
-          Your email:
-          <input type="text" name="_replyto">
-        </label>
-        <label>
-          Your message:
-          <textarea name="message"></textarea>
-        </label>
+      <div class="row" style="justify-content: center;">
+        <form action="https://formspree.io/xrgapyzy" method="POST" style="width: 220px;">
+         <div class="form-group">
+          <label>
+            e m a i l:
+            <input class="form-control" type="text" name="_replyto">
+          </label>
+        </div>
+        <div class="form-group">
+          <label>
+            m e s s a g e:
+            <textarea class="form-control" name="message"></textarea>
+          </label>
+        </div>
         <br>
-        <button type="submit">Send</button>
+        <button type="submit" class="draw meet">Send</button>
       </form>
+      </div>
+
+
     </div>
   </div>
 
