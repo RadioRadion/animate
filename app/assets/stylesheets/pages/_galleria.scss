@@ -7,6 +7,20 @@
   height: 500px;
 }
 
+.pic {
+  height: 50px;
+  margin-top: 20px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (max-width: 640px) {
+  .horizontale {
+    max-width: 90%;padding-top: 25%;
+  }
+}
+
 .pic img {
   height: 100%;
   margin: 0 5px 10px 5px;
@@ -22,7 +36,3 @@
   opacity: 0;
 }
 
-.pic {
-  height: 50px;
-  margin-top: 20px;
-}
