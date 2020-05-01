@@ -33,17 +33,19 @@
     <div class="slide" id="slide2">
       <div class="gallery">
         <h2>d e s i g n</h2>
-        <div id="bigpic2" class="bigpic">
-          <%= image_tag "photos/resize/design/01.jpg", alt: "photo1" %>
+        <div id="carousel">
+          <figure id="spinner">
+            <%= image_tag "photos/resize/design/01.jpg", alt: "design" %>
+            <%= image_tag "photos/resize/design/02.jpg", alt: "design" %>
+            <%= image_tag "photos/resize/design/03.jpg", alt: "design" %>
+            <%= image_tag "photos/resize/design/04.jpg", alt: "design" %>
+            <%= image_tag "photos/resize/design/05.jpg", alt: "design" %>
+            <%= image_tag "photos/resize/design/06.jpg", alt: "design" %>
+
+          </figure>
         </div>
-        <div class="pic pic2">
-          <%= image_tag "photos/resize/design/01.jpg", alt: "design" %>
-          <%= image_tag "photos/resize/design/02.jpg", alt: "design" %>
-          <%= image_tag "photos/resize/design/03.jpg", alt: "design" %>
-          <%= image_tag "photos/resize/design/04.jpg", alt: "design" %>
-          <%= image_tag "photos/resize/design/05.jpg", alt: "design" %>
-          <%= image_tag "photos/resize/design/06.jpg", alt: "design" %>
-        </div>
+        <span style="float:left" class="ss-icon" onclick="galleryspin('-')">&lt;</span>
+        <span style="float:right" class="ss-icon" onclick="galleryspin('')">&gt;</span>
       </div>
       <div class="rallonge"></div>
     </div>
@@ -217,3 +219,11 @@
   </div>
 </div>
 
+<script>
+  var angle = 0;
+function galleryspin(sign) {
+spinner = document.querySelector("#spinner");
+if (!sign) { angle = angle + 45; } else { angle = angle - 45; }
+spinner.setAttribute("style","-webkit-transform: rotateY("+ angle +"deg); -moz-transform: rotateY("+ angle +"deg); transform: rotateY("+ angle +"deg);");
+}
+</script>
