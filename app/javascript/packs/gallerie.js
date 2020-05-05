@@ -39,6 +39,7 @@ const timeOut = () => {
       count = 1;
     } else {
         count += 1;
+        console.log(count);
     }
     timeOut();
   }, 10000);
