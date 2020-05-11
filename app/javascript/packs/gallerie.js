@@ -39,7 +39,6 @@ const timeOut = () => {
       count = 1;
     } else {
         count += 1;
-        console.log(count);
     }
     timeOut();
   }, 10000);
@@ -60,3 +59,74 @@ tl.to(snow, 10, { bezier: {
             timeResolution: 12
           }, ease: Linear.easeNone});
 tl.to(snow, 5, {autoAlpha:1, repeat:1, yoyo:true, ease: Linear.easeNone}, 0);
+
+//bigpic5 code there
+let count5 = 1;
+bigpic5.addEventListener("mouseover", (event) => {
+  if (count5 === 8) { count5 = 0 };
+  count5 += 1;
+  if (count5 === 1 ) {
+    gsap.to("#bigpic5", {duration: 2, x: -100, opacity: 0});
+    setTimeout(function() {
+      bigpic5.src = `assets/photos/resize/paysage/rural/01.jpg`;
+      gsap.to("#bigpic5", {duration: 2, x: 0, opacity: 1});
+    }, 2000);
+  };
+  if (count5 === 2 ) {
+    gsap.to("#bigpic5", {duration: 2, x: 100, opacity: 0});
+    setTimeout(function() {
+      bigpic5.src = `assets/photos/resize/paysage/rural/02.jpg`;
+      gsap.to("#bigpic5", {duration: 2, x: 0, opacity: 1});
+    }, 2000);
+  };
+  if (count5 === 3 ) {
+    gsap.to("#bigpic5", {duration: 2, x: -100, opacity: 0});
+    setTimeout(function() {
+      bigpic5.src = `assets/photos/resize/paysage/rural/03.jpg`;
+      gsap.to("#bigpic5", {duration: 2, x: 0, opacity: 1});
+    }, 2000);
+  };
+  if (count5 === 4 ) {
+    gsap.to("#bigpic5", {duration: 2, x: 100, opacity: 0});
+    setTimeout(function() {
+      bigpic5.src = `assets/photos/resize/paysage/rural/04.jpg`;
+      gsap.to("#bigpic5", {duration: 2, x: 0, opacity: 1});
+    }, 2000);
+  };
+  if (count5 === 5 ) {
+    gsap.to("#bigpic5", {duration: 2, x: -100, opacity: 0});
+    setTimeout(function() {
+      bigpic5.src = `assets/photos/resize/paysage/urbain/01.jpg`;
+      gsap.to("#bigpic5", {duration: 2, x: 0, opacity: 1});
+    }, 2000);
+  };
+  if (count5 === 6 ) {
+    gsap.to("#bigpic5", {duration: 2, x: 100, opacity: 0});
+    setTimeout(function() {
+      bigpic5.src = `assets/photos/resize/paysage/urbain/02.jpg`;
+      gsap.to("#bigpic5", {duration: 2, x: 0, opacity: 1});
+    }, 2000);
+  };
+  if (count5 === 7 ) {
+    gsap.to("#bigpic5", {duration: 2, x: -100, opacity: 0});
+    setTimeout(function() {
+      bigpic5.src = `assets/photos/resize/paysage/urbain/03.jpg`;
+      gsap.to("#bigpic5", {duration: 2, x: 0, opacity: 1});
+    }, 2000);
+  };
+  if (count5 === 8 ) {
+    gsap.to("#bigpic5", {duration: 2, x: 100, opacity: 0});
+    setTimeout(function() {
+      bigpic5.src = `assets/photos/resize/paysage/urbain/04.jpg`;
+      gsap.to("#bigpic5", {duration: 2, x: 0, opacity: 1});
+    }, 2000);
+  };
+});
+          // <%= image_tag "photos/resize/paysage/rural/01.jpg", alt: "rural" %>
+          // <%= image_tag "photos/resize/paysage/rural/02.jpg", alt: "rural" %>
+          // <%= image_tag "photos/resize/paysage/rural/03.jpg", alt: "rural" %>
+          // <%= image_tag "photos/resize/paysage/rural/04.jpg", alt: "rural" %>
+          // <%= image_tag "photos/resize/paysage/urbain/01.jpg", alt: "urbain" %>
+          // <%= image_tag "photos/resize/paysage/urbain/02.jpg", alt: "urbain" %>
+          // <%= image_tag "photos/resize/paysage/urbain/03.jpg", alt: "urbain" %>
+          // <%= image_tag "photos/resize/paysage/urbain/04.jpg", alt: "urbain" %>
