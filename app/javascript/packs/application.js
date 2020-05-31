@@ -1,6 +1,5 @@
 import "bootstrap";
 
-
 // animations de la section 1 //
 // gsap.from(".animate", {duration: 3, x: 100});
 

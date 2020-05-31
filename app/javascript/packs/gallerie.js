@@ -31,7 +31,7 @@ pics5.forEach(pic => pic.addEventListener("mouseover", (event) => {
 }));
 
 //settime pour la gallery4'
-let count = 1;
+let count = 2;
 const timeOut = () => {
   setTimeout(function() {
     bigpic4.src = `assets/photos/resize/nature/0${count}.jpg`;
@@ -122,11 +122,62 @@ bigpic5.addEventListener("mouseover", (event) => {
     }, 2000);
   };
 });
-          // <%= image_tag "photos/resize/paysage/rural/01.jpg", alt: "rural" %>
-          // <%= image_tag "photos/resize/paysage/rural/02.jpg", alt: "rural" %>
-          // <%= image_tag "photos/resize/paysage/rural/03.jpg", alt: "rural" %>
-          // <%= image_tag "photos/resize/paysage/rural/04.jpg", alt: "rural" %>
-          // <%= image_tag "photos/resize/paysage/urbain/01.jpg", alt: "urbain" %>
-          // <%= image_tag "photos/resize/paysage/urbain/02.jpg", alt: "urbain" %>
-          // <%= image_tag "photos/resize/paysage/urbain/03.jpg", alt: "urbain" %>
-          // <%= image_tag "photos/resize/paysage/urbain/04.jpg", alt: "urbain" %>
+
+//full screen img onclick with modals
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById("myImg");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+var modal2 = document.getElementById("myModal2");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img2 = document.querySelectorAll(".myImg2");
+// var modalImg2 = document.getElementById("img02");
+// var captionText2 = document.getElementById("caption2");
+img2.forEach(img => img.addEventListener("mouseover", (event) => {
+  // modal2.style.display = "block";
+  // modalImg2.src = event.currentTarget.src;
+  // captionText2.innerHTML = event.currentTarget.alt;
+  img.style.height = "100vh";
+  setTimeout(function() {
+    img.style.height = "500px";
+  }, 3000);
+}));
+
+bigpic5.addEventListener("click", (event) => {
+  console.log(event);
+  bigpic5.style.height = "100vh";
+  setTimeout(function() {
+    bigpic5.style.height = "500px";
+  }, 3000);
+})
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+// var span2 = document.getElementsByClassName("close")[1];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+// span2.onclick = function() {
+//   modal.style.display = "none";
+// }
+
+document.addEventListener('keyup', logKey);
+function logKey(e) {
+  if (e.keyCode === 27) {
+    console.log("ok");
+    modal.style.display = "none";
+    // modal2.style.display = "none";
+    }
+}

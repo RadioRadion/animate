@@ -13,7 +13,19 @@
       <div class="gallery">
         <h2>a b s t r a i t & c o n c e p t</h2>
         <div id="bigpic1" class="bigpic">
-          <%= image_tag "photos/resize/creation/abstrait/01.jpg", alt: "photo1" %>
+          <%= image_tag "photos/resize/creation/abstrait/01.jpg", alt: "photo1", id: "myImg" %>
+        </div>
+        <div id="myModal" class="modal">
+
+          <!-- The Close Button -->
+          <span class="close">&times;</span>
+
+          <!-- Modal Content (The Image) -->
+          <img class="modal-contentent" id="img01">
+
+          <!-- Modal Caption (Image Text) -->
+          <div id="caption"></div>
+          <div class="rallonge"></div>
         </div>
         <div class="pic pic1">
           <%= image_tag "photos/resize/creation/abstrait/01.jpg", alt: "abstrait" %>
@@ -54,64 +66,64 @@
       <div class="gallery">
         <h2>e r o t i q u e & p o r t r a i t</h2>
         <div class="bigpic">
-          <%= image_tag "photos/resize/humain/erotique/01.jpg", alt: "erotique" %>
+          <%= image_tag "photos/resize/humain/erotique/01.jpg", alt: "erotique", class: "myImg2" %>
         </div>
         <div class="bigpic bigpic3">
-          <%= image_tag "photos/resize/humain/erotique/02.jpg", alt: "erotique" %>
+          <%= image_tag "photos/resize/humain/erotique/02.jpg", alt: "erotique", class: "myImg2" %>
         </div>
         <div class="bigpic bigpic3">
-          <%= image_tag "photos/resize/humain/erotique/03.jpg", alt: "erotique" %>
+          <%= image_tag "photos/resize/humain/erotique/03.jpg", alt: "erotique", class: "myImg2" %>
         </div>
         <div class="bigpic bigpic3">
-          <%= image_tag "photos/resize/humain/erotique/04.jpg", alt: "erotique" %>
+          <%= image_tag "photos/resize/humain/erotique/04.jpg", alt: "erotique", class: "myImg2" %>
         </div>
         <div class="bigpic bigpic3">
-          <%= image_tag "photos/resize/humain/erotique/05.jpg", alt: "erotique" %>
+          <%= image_tag "photos/resize/humain/erotique/05.jpg", alt: "erotique", class: "myImg2" %>
         </div>
         <div class="bigpic bigpic3">
-          <%= image_tag "photos/resize/humain/portrait/01.jpg", alt: "portrait" %>
+          <%= image_tag "photos/resize/humain/portrait/01.jpg", alt: "portrait", class: "myImg2" %>
         </div>
         <div class="bigpic bigpic3">
-          <%= image_tag "photos/resize/humain/portrait/02.jpg", alt: "portrait" %>
+          <%= image_tag "photos/resize/humain/portrait/02.jpg", alt: "portrait", class: "myImg2" %>
         </div>
         <div class="bigpic bigpic3">
-          <%= image_tag "photos/resize/humain/portrait/03.jpg", alt: "portrait" %>
+          <%= image_tag "photos/resize/humain/portrait/03.jpg", alt: "portrait", class: "myImg2" %>
         </div>
         <div class="bigpic bigpic3">
-          <%= image_tag "photos/resize/humain/portrait/04.jpg", alt: "portrait" %>
+          <%= image_tag "photos/resize/humain/portrait/04.jpg", alt: "portrait", class: "myImg2" %>
         </div>
         <div class="bigpic bigpic3">
-          <%= image_tag "photos/resize/humain/portrait/05.jpg", alt: "portrait" %>
+          <%= image_tag "photos/resize/humain/portrait/05.jpg", alt: "portrait", class: "myImg2" %>
         </div>
         <div class="bigpic bigpic3">
-          <%= image_tag "photos/resize/humain/portrait/06.jpg", alt: "portrait" %>
+          <%= image_tag "photos/resize/humain/portrait/06.jpg", alt: "portrait", class: "myImg2" %>
         </div>
         <div class="bigpic bigpic3">
-          <%= image_tag "photos/resize/humain/portrait/07.jpg", alt: "portrait" %>
+          <%= image_tag "photos/resize/humain/portrait/07.jpg", alt: "portrait", class: "myImg2" %>
         </div>
         <div class="bigpic bigpic3">
-          <%= image_tag "photos/resize/humain/portrait/08.jpg", alt: "portrait" %>
+          <%= image_tag "photos/resize/humain/portrait/08.jpg", alt: "portrait", class: "myImg2" %>
         </div>
         <div class="bigpic bigpic3">
-          <%= image_tag "photos/resize/humain/portrait/09.jpg", alt: "portrait" %>
+          <%= image_tag "photos/resize/humain/portrait/09.jpg", alt: "portrait", class: "myImg2" %>
         </div>
         <div class="bigpic bigpic3">
-          <%= image_tag "photos/resize/humain/portrait/09.jpg", alt: "portrait" %>
+          <%= image_tag "photos/resize/humain/portrait/09.jpg", alt: "portrait", class: "myImg2" %>
         </div>
         <div class="bigpic bigpic3">
-          <%= image_tag "photos/resize/humain/portrait/10.jpg", alt: "portrait" %>
+          <%= image_tag "photos/resize/humain/portrait/10.jpg", alt: "portrait", class: "myImg2" %>
         </div>
         <div class="bigpic bigpic3">
-          <%= image_tag "photos/resize/humain/portrait/11.jpg", alt: "portrait" %>
+          <%= image_tag "photos/resize/humain/portrait/11.jpg", alt: "portrait", class: "myImg2" %>
         </div>
         <div class="bigpic bigpic3">
-          <%= image_tag "photos/resize/humain/portrait/12.jpg", alt: "portrait" %>
+          <%= image_tag "photos/resize/humain/portrait/12.jpg", alt: "portrait", class: "myImg2" %>
         </div>
         <div class="bigpic bigpic3">
-          <%= image_tag "photos/resize/humain/portrait/13.jpg", alt: "portrait" %>
+          <%= image_tag "photos/resize/humain/portrait/13.jpg", alt: "portrait", class: "myImg2" %>
         </div>
         <div class="bigpic bigpic3">
-          <%= image_tag "photos/resize/humain/portrait/14.jpg", alt: "portrait" %>
+          <%= image_tag "photos/resize/humain/portrait/14.jpg", alt: "portrait", class: "myImg2" %>
         </div>
       </div>
       <div class="rallonge"></div>
@@ -147,9 +159,24 @@
     </div>
 
     <div class="slide" id="slide0">
-      <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/82188804&color=%23fdcb36&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+      <h2>* * *</h2>
+      <h2>e x p e r i m e n t a t i o n s</h2>
+      <h2>s o u n d s</h2>
+      <h2>t h i n g s</h2>
+      <h2>↓ ↓ ↓</h2>
+      <div class="lector">
+        <iframe width="80%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/82188804&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/deepheads" title="Deep Heads" target="_blank" style="color: #cccccc; text-decoration: none;">Deep Heads</a> · <a href="https://soundcloud.com/deepheads/geode-feat-c-tivey-ruh-smokin" title="Geode Feat C Tivey &quot;Ruh&quot; [Out Now]" target="_blank" style="color: #cccccc; text-decoration: none;">Geode Feat C Tivey &quot;Ruh&quot; [Out Now]</a></div>
+      </div>
+      <div class="lector">
+        <iframe width="80%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/106372521&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/victor-kiswell" title="victor kiswell" target="_blank" style="color: #cccccc; text-decoration: none;">victor kiswell</a> · <a href="https://soundcloud.com/victor-kiswell/latin-jazzystan" title="Latin Jazzystan" target="_blank" style="color: #cccccc; text-decoration: none;">Latin Jazzystan</a></div>
+      </div>
+      <div class="lector">
+        <iframe width="80%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/610275660&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/inverted-audio" title="INVERTED AUDIO" target="_blank" style="color: #cccccc; text-decoration: none;">INVERTED AUDIO</a> · <a href="https://soundcloud.com/inverted-audio/faltydl-ill-bent-blueberry-records" title="FaltyDL – Ill Bent [Blueberry Records]" target="_blank" style="color: #cccccc; text-decoration: none;">FaltyDL – Ill Bent [Blueberry Records]</a></div>
+      </div>
+      <div class="lector">
+        <iframe width="80%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/610090422&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/the-trilogy-tapes" title="The Trilogy Tapes" target="_blank" style="color: #cccccc; text-decoration: none;">The Trilogy Tapes</a> · <a href="https://soundcloud.com/the-trilogy-tapes/fft-loss" title="FFT – Loss" target="_blank" style="color: #cccccc; text-decoration: none;">FFT – Loss</a></div>
+      </div>
     </div>
-
     <div class="slide" id="slide1">
       <div class="layer">
       <%#= image_tag "logos/girouette.png", alt: "abstrait", id: "logo" %>
