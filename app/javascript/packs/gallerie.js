@@ -31,34 +31,27 @@ pics5.forEach(pic => pic.addEventListener("mouseover", (event) => {
 }));
 
 //settime pour la gallery4'
-let count = 2;
-const timeOut = () => {
-  setTimeout(function() {
-    bigpic4.src = `assets/photos/resize/nature/0${count}.jpg`;
-    if (count === 8) {
-      count = 1;
-    } else {
-        count += 1;
-    }
-    timeOut();
-  }, 10000);
-}
+// let count = 2;
+// const timeOut = () => {
+//   setTimeout(function() {
+//     bigpic4.src = `assets/photos/resize/nature/0${count}.jpg`;
+//     if (count === 8) {
+//       count = 1;
+//     } else {
+//         count += 1;
+//     }
+//     timeOut();
+//   }, 4000);
+// }
 
-timeOut();
+// timeOut();
 
-//gsap for bigpic4, Bezier don't work there
-var snow = $("#bigpic4");
-var tl = new TimelineMax({repeat:-1});
-var bezierPath = [{ x: 5, y: 4 }, { x: -5, y: 8 }, { x: 5, y: 12 },{ x: -5, y: 16 }];
+// //gsap for bigpic4, Bezier don't work there
+// var snow = $("#bigpic4");
+// var tl = new TimelineMax({repeat:-1});
 
-tl.set(snow, {autoAlpha:0});
-tl.to(snow, 10, { bezier: {
-            type: 'soft',
-            values: bezierPath,
-            smoothOrigin: true,
-            timeResolution: 12
-          }, ease: Linear.easeNone});
-tl.to(snow, 5, {autoAlpha:1, repeat:1, yoyo:true, ease: Linear.easeNone}, 0);
+// tl.set(snow, {autoAlpha:0});
+// tl.to(snow, 2, {autoAlpha:1, repeat:1, yoyo:true, ease: Linear.easeNone}, 3);
 
 //bigpic5 code there
 let count5 = 1;
@@ -144,6 +137,17 @@ var img2 = document.querySelectorAll(".myImg2");
 // var modalImg2 = document.getElementById("img02");
 // var captionText2 = document.getElementById("caption2");
 img2.forEach(img => img.addEventListener("mouseover", (event) => {
+  // modal2.style.display = "block";
+  // modalImg2.src = event.currentTarget.src;
+  // captionText2.innerHTML = event.currentTarget.alt;
+  img.style.height = "100vh";
+  setTimeout(function() {
+    img.style.height = "500px";
+  }, 3000);
+}));
+
+var img3 = document.querySelectorAll(".myImg3");
+img3.forEach(img => img.addEventListener("click", (event) => {
   // modal2.style.display = "block";
   // modalImg2.src = event.currentTarget.src;
   // captionText2.innerHTML = event.currentTarget.alt;

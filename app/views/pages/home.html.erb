@@ -132,8 +132,38 @@
     <div class="slide" id="slide4">
       <div class="gallery">
         <h2>n a t u r e</h2>
-        <div id="bigpic4" class="bigpic">
-          <%= image_tag "photos/resize/nature/01.jpg", alt: "photo1" %>
+        <div class="d-flex justify-content-between">
+          <div class="bigpic bigpic4">
+            <%= image_tag "photos/resize/nature/01.jpg", alt: "photo1", class: "myImg3" %>
+          </div>
+          <div class="bigpic bigpic4">
+            <%= image_tag "photos/resize/nature/02.jpg", alt: "photo1", class: "myImg3" %>
+          </div>
+          <div class="bigpic bigpic4">
+            <%= image_tag "photos/resize/nature/03.jpg", alt: "photo1", class: "myImg3" %>
+          </div>
+        </div>
+        <div class="d-flex justify-content-between">
+          <div class="bigpic bigpic4">
+            <%= image_tag "photos/resize/nature/04.jpg", alt: "photo1", class: "myImg3" %>
+          </div>
+          <div class="bigpic bigpic4">
+            <%= image_tag "photos/resize/nature/05.jpg", alt: "photo1", class: "myImg3" %>
+          </div>
+          <div class="bigpic bigpic4">
+            <%= image_tag "photos/resize/nature/06.jpg", alt: "photo1", class: "myImg3" %>
+          </div>
+        </div>
+        <div class="d-flex justify-content-between">
+          <div class="bigpic bigpic4">
+            <%= image_tag "photos/resize/nature/07.jpg", alt: "photo1", class: "myImg3" %>
+          </div>
+          <div class="bigpic bigpic4">
+            <%= image_tag "photos/resize/nature/08.jpg", alt: "photo1", class: "myImg3" %>
+          </div>
+          <div class="bigpic bigpic4">
+            <%= image_tag "photos/resize/nature/08.jpg", alt: "photo1", class: "myImg3" %>
+          </div>
         </div>
       </div>
       <div class="rallonge"></div>
@@ -202,16 +232,22 @@
           </label>
         </div>
         <br>
-        <button type="submit" class="draw meet">Send</button>
+        <button type="submit" class="draw meet real">Send</button>
       </form>
       </div>
-
-
     </div>
   </div>
 
   <div class="section" id="section2">
-    <div class="slide" id="slide1">
+    <button class="js-modal-btn real" data-video-id="sBwaeeSgJZA">Open Video</button>
+    <button class="js-modal-btn real" data-video-id="IKLsjYcglU8">Open Video</button>
+    <button class="js-modal-btn real" data-video-id="rmJkNMSejL8">Open Video</button>
+    <button class="js-modal-btn real" data-video-id="ew5XlNW9-1Q">Open Video</button>
+    <%= image_tag "photos/resize/nature/08.jpg", alt: "photo1", class: "myImg3 js-modal-btn", data: { video_id: "rmJkNMSejL8" } %>
+
+
+
+<!--     <div class="slide" id="slide1">
       <iframe width="95%" height="95%" src="https://www.youtube.com/embed/sBwaeeSgJZA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
     <div class="slide" id="slide2">
@@ -223,7 +259,7 @@
     <div class="slide" id="slide4">
       <iframe width="95%" height="95%" src="https://www.youtube.com/embed/ew5XlNW9-1Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
-  </div>
+  </div> -->
 </div>
 
 <script>
