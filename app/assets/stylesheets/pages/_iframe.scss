@@ -1,0 +1,12 @@
+.ClassCSS {
+    width: 100%;
+}
+.ClassCSS iframe{
+    display: block;
+    width: 100%;
+    position: relative;
+    pointer-events: none;
+}
+.ClassCSS iframe.clicked{
+    pointer-events: auto;
+}
