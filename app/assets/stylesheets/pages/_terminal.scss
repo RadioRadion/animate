@@ -5,10 +5,18 @@ body {
 span {
   color: white;
   font-family: monospace;
-  font-size: 173%;
+  font-size: 110%;
+}
+
+#AboutDevTypeText {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 80;
 }
 
 .blinker {
+  z-index: 80;
   opacity: 1;
   margin-bottom: -2px;
   height: 15px;

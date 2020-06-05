@@ -11,7 +11,9 @@
         crossorigin="anonymous"></script>
     <script type="text/javascript">
       function goToAnchor() {
-        fullpage_api.silentMoveTo(2,1);
+        setTimeout(function() {
+          fullpage_api.silentMoveTo(2,1);
+        }, 6000);
       }
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.5/fullpage.js"></script>
