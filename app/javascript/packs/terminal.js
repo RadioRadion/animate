@@ -22,7 +22,7 @@ var allElements = document.getElementsByClassName("typeing");
       if (char === "<") isTag = true;
       if (char === ">") isTag = false;
       if (isTag) return type();
-      setTimeout(type, 100);
+      setTimeout(type, 120);
     })();
   }
 }, 2000);
