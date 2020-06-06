@@ -15,7 +15,7 @@
 
     .panel {
       background: #6B0F9C;
-      box-shadow: inset 0 0 0 5px rgba(255,255,255,0.1);
+      box-shadow: inset 0 0 8px 4px rgba(255,255,255,0.1);
       color: white;
       text-align: center;
       align-items: center;
@@ -34,11 +34,11 @@
       flex-direction: column;
     }
 
-    .panel1 { background-image: url(/assets/covers/succumb.jpg); }
-    .panel2 { background-image:url(https://source.unsplash.com/rFKUFzjPYiQ/1500x1500); }
-    .panel3 { background-image:url(https://images.unsplash.com/photo-1465188162913-8fb5709d6d57?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&w=1500&h=1500&fit=crop&s=967e8a713a4e395260793fc8c802901d); }
-    .panel4 { background-image:url(https://source.unsplash.com/ITjiVXcwVng/1500x1500); }
-    .panel5 { background-image:url(https://source.unsplash.com/3MNzGlQM7qs/1500x1500); }
+    .panel1 { background-image: url(asset-path("covers/oceano")); }
+    .panel2 { background-image: url(asset-path("covers/imwt")); }
+    .panel3 { background-image: url(asset-path("covers/succumb")); }
+    .panel4 { background-image: url(asset-path("covers/chandler")); }
+    .panel5 { background-image: url(asset-path("covers/oceano")); }
 
     /* Flex Items */
     .panel > * {
@@ -59,11 +59,18 @@
     .panel p {
       font-family: monospace;
       text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
-      font-size: 2em;
+      font-size: 1em;
     }
 
     .panel p:nth-child(2) {
       // font-size: 4em;
+    }
+
+    .panel button {
+      width: 5%;
+      height: 10vh;
+      margin-bottom: 10px;
+      font-size: 52%;
     }
 
     .panel.open {
