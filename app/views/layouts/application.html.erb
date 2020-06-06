@@ -50,7 +50,6 @@
         // scrollHorizontally: true,
         navigationTooltips: ['f l a s h', '', 't v'],
         showActiveTooltip: true,
-        loopBottom: true,
         scrollOverflow: true,
         scrollingSpeed: 1700,
         menu: '#menu',
@@ -115,6 +114,21 @@
                 destination: destination,
                 direction: direction
             };
+            console.log(params);
+            if (params.destination.anchor === "secondPage" && params.destination.index === 1) {
+              // gsap.from(".ClassCSS", {duration: 1, x: 300, opacity: 0, delay: 0.2, scale: 0.5});
+              gsap.to(".ClassCSS", {
+              duration: 1,
+              x: 0,
+              opacity: 1,
+              delay: 0.8,
+              stagger: 0.2,
+              ease: "expo",
+              force3D: true
+              });
+            } else {
+              gsap.to(".ClassCSS", {duration: 0.2, x: 400, opacity: 0});
+            }
         }
     });
     </script>

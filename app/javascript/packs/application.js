@@ -410,6 +410,7 @@ var triggerEvent = exports.triggerEvent = function triggerEvent(el, eventName, o
 },{}]},{},[4])(4)
 });
 
-new ModalVideo('.js-modal-btn');
+new ModalVideo('.js-modal-youtube');
+new ModalVideo('.js-modal-vimeo', {channel: 'vimeo'});
 
 
