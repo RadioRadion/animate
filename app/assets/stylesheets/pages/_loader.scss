@@ -39,7 +39,7 @@ h1 {
   margin: -75px 0 0 -75px;
   border-radius: 50%;
   border: 3px solid transparent;
-  border-top-color: #16a085;
+  border-top-color: $yellow;
   animation: spin 1.7s linear infinite;
   z-index: 11;
 
@@ -52,7 +52,7 @@ h1 {
     bottom: 5px;
     border-radius: 50%;
     border: 3px solid transparent;
-    border-top-color: #e74c3c;
+    border-top-color: $yellow;
     animation: spin-reverse .6s linear infinite;
   }
 
@@ -65,7 +65,7 @@ h1 {
     bottom: 15px;
     border-radius: 50%;
     border: 3px solid transparent;
-    border-top-color: #f9c922;
+    border-top-color: $yellow;
     animation: spin 1s linear infinite;
   }
 }

@@ -158,7 +158,6 @@ img3.forEach(img => img.addEventListener("click", (event) => {
 }));
 
 bigpic5.addEventListener("click", (event) => {
-  console.log(event);
   bigpic5.style.height = "100vh";
   setTimeout(function() {
     bigpic5.style.height = "500px";
@@ -180,7 +179,6 @@ span.onclick = function() {
 document.addEventListener('keyup', logKey);
 function logKey(e) {
   if (e.keyCode === 27) {
-    console.log("ok");
     modal.style.display = "none";
     // modal2.style.display = "none";
     }

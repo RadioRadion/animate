@@ -12,7 +12,11 @@ import "bootstrap";
 gsap.from(".animate", {duration: 3, x: 100});
 
 setTimeout(function() {
-  gsap.from("#fp-nav", {duration: 25, x: 300, opacity: 0});
+  gsap.from("#fp-nav", {duration: 20, x: 300, opacity: 0});
+  }, 0);
+
+setTimeout(function() {
+  gsap.from(".fp-bottom", {duration: 20, y: 300, opacity: 0});
   }, 0);
 
 setTimeout(function() {

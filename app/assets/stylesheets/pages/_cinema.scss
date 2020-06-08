@@ -6,6 +6,15 @@
       font-weight: 200;
     }
 
+    .blurred {
+       color: $yellow;
+       text-shadow: 0 0 5px rgba(0,0,0,0.5);
+    }
+
+    // .play {
+    //   width: 200px !important;
+    // }
+
     .panels {
       min-height: 100vh;
       overflow: hidden;
@@ -66,12 +75,12 @@
       // font-size: 4em;
     }
 
-    .panel button {
-      width: 5%;
-      height: 10vh;
-      margin-bottom: 10px;
-      font-size: 52%;
-    }
+    // .panel button {
+    //   width: 5%;
+    //   height: 10vh;
+    //   margin-bottom: 10px;
+    //   font-size: 52%;
+    // }
 
     .panel.open {
       flex: 5;
