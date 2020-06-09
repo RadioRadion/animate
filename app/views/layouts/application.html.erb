@@ -14,6 +14,9 @@
         setTimeout(function() {
           fullpage_api.silentMoveTo(2,1);
           gsap.to("#background", {duration: 6, delay: 1, opacity: 0});
+          setTimeout(function() {
+            document.querySelector('#background').remove();
+            }, 6000);
         }, 6000);
       }
     </script>
