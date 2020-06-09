@@ -108,9 +108,6 @@
           <%= image_tag "photos/resize/humain/portrait/09.jpg", alt: "portrait", class: "myImg2" %>
         </div>
         <div class="bigpic bigpic3">
-          <%= image_tag "photos/resize/humain/portrait/09.jpg", alt: "portrait", class: "myImg2" %>
-        </div>
-        <div class="bigpic bigpic3">
           <%= image_tag "photos/resize/humain/portrait/10.jpg", alt: "portrait", class: "myImg2" %>
         </div>
         <div class="bigpic bigpic3">
@@ -247,21 +244,22 @@
       <div class="row" style="justify-content: center;">
         <form action="https://formspree.io/xrgapyzy" method="POST">
          <div class="form-group">
-          <label>
+          <label style="width: 100%;">
             e m a i l:
-            <input class="form-control" type="text" name="_replyto">
+            <input class="form-control" type="text" name="_replyto" style="text-align: center;">
           </label>
         </div>
         <div class="form-group">
           <label>
             m e s s a g e:
-            <textarea class="form-control" name="message"></textarea>
+            <textarea class="form-control" name="message" style="max-height: 150px;"></textarea>
           </label>
         </div>
         <br>
         <button type="submit" class="spin circle real">S E N D</button>
       </form>
       </div>
+      <!-- <div class="rallonge"></div> -->
     </div>
   </div>
 

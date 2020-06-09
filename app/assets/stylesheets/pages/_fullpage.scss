@@ -300,3 +300,8 @@ html.fp-enabled,
     background-image: url(asset-path("photos/thumb/humain/portrait/08.jpg"));
     background-color: black;
   }
+
+  #slide0 {
+    background-image: url(asset-path("photos/resize/nature/00.jpg"));
+    background-size: cover;
+  }
