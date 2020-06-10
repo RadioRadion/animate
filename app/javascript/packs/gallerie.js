@@ -61,14 +61,14 @@ bigpic5.addEventListener("mouseover", (event) => {
   if (count5 === 1 ) {
     gsap.to("#bigpic5", {duration: 1, x: -100, opacity: 0});
     setTimeout(function() {
-      bigpic5.src = "<%= asset_path('photos/resize/nature/01.jpg') %>";
+      bigpic5.src = `assets/photos/resize/paysage/rural/01.jpg`;
       gsap.to("#bigpic5", {duration: 1, x: 0, opacity: 1});
     }, 1000);
   };
   if (count5 === 2 ) {
     gsap.to("#bigpic5", {duration: 1, x: 100, opacity: 0});
     setTimeout(function() {
-      bigpic5.src = "<%= asset_path('photos/resize/nature/01.jpg') %>";
+      bigpic5.src = `assets/photos/resize/paysage/rural/02.jpg`;
       gsap.to("#bigpic5", {duration: 1, x: 0, opacity: 1});
     }, 1000);
   };
