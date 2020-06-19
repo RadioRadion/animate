@@ -6,6 +6,12 @@
       font-weight: 200;
     }
 
+    .opacited {
+      opacity: 0.2;
+      transition-property: opacity;
+      transition-duration: 2s;
+    }
+
     .blurred {
        color: $yellow;
        text-shadow: 0 0 5px rgba(0,0,0,0.5);

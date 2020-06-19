@@ -1,4 +1,6 @@
 const panels = document.querySelectorAll('.panel');
+const plays = document.querySelectorAll('.play');
+const opacites = document.querySelectorAll('.opacite');
 
     function toggleOpen() {
       this.classList.toggle('open');
@@ -7,6 +9,7 @@ const panels = document.querySelectorAll('.panel');
     function toggleActive(e) {
       if (e.propertyName.includes('flex')) {
         this.classList.toggle('open-active');
+      opacites.forEach(opacite => opacite.classList.toggle('opacited'));
       }
     }
 
@@ -21,7 +24,6 @@ function deblur() {
   this.classList.remove('blurred');
 }
 
-const plays = document.querySelectorAll('.play');
 plays.forEach(play => play.addEventListener('mouseover', blur));
 plays.forEach(play => play.addEventListener('mouseout', deblur));
 

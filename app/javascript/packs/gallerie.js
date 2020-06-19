@@ -30,28 +30,6 @@ pics5.forEach(pic => pic.addEventListener("mouseover", (event) => {
   bigpic5.src = event.currentTarget.src;
 }));
 
-//settime pour la gallery4'
-// let count = 2;
-// const timeOut = () => {
-//   setTimeout(function() {
-//     bigpic4.src = `assets/photos/resize/nature/0${count}.jpg`;
-//     if (count === 8) {
-//       count = 1;
-//     } else {
-//         count += 1;
-//     }
-//     timeOut();
-//   }, 4000);
-// }
-
-// timeOut();
-
-// //gsap for bigpic4, Bezier don't work there
-// var snow = $("#bigpic4");
-// var tl = new TimelineMax({repeat:-1});
-
-// tl.set(snow, {autoAlpha:0});
-// tl.to(snow, 2, {autoAlpha:1, repeat:1, yoyo:true, ease: Linear.easeNone}, 3);
 
 //bigpic5 code there
 let count5 = 1;
@@ -127,7 +105,7 @@ var captionText = document.getElementById("caption");
 img.onclick = function(){
   modal.style.display = "block";
   modalImg.src = this.src;
-  captionText.innerHTML = this.alt;
+  // captionText.innerHTML = this.alt;
 }
 
 var modal2 = document.getElementById("myModal2");

@@ -1,54 +1,39 @@
 import "bootstrap";
 
-// animations de la section 1 //
-// gsap.from(".animate", {duration: 3, x: 100});
-
-// const rotate = () => {
-//   gsap.to(".animate", {duration: 3, rotation: 360, skewX: 45 });
-// }
-
-// const button = document.getElementById('test')
-// button.addEventListener("click", rotate);
-gsap.from(".animate", {duration: 3, x: 100});
-
-setTimeout(function() {
-  gsap.from("#fp-nav", {duration: 20, x: 300, opacity: 0});
-  }, 0);
-
-setTimeout(function() {
-  gsap.from(".fp-bottom", {duration: 20, y: 300, opacity: 0});
-  }, 0);
-
-setTimeout(function() {
-  gsap.from("#logo", {duration: 9, opacity: 0, scale: 0.5});
-  }, 3500);
+////////////////Fonction déclancheuse du site
+window.addEventListener('load', function () {
+    gsap.fromTo("#fp-nav", {x: 300, opacity: 0}, {duration: 20, x: 0, opacity: 1});
+    // gsap.from("#fp-nav", {duration: 15, x: 300, opacity: 0});
+    gsap.from(".fp-bottom", {duration: 20, y: 300, opacity: 0});
+  setTimeout(function() {
+    //On bouge en sneaky sur le mid
+    fullpage_api.silentMoveTo(2,1);
+    //On fait disparaître le noir
+    gsap.to("#background", {duration: 6, delay: 1, opacity: 0});
+    //On ajoute la class loaded pour retirer le loader de la première section
+    var body = document.body;
+    body.classList.add("loaded");
+    ///////////////////Animation fondue des menus
+    setTimeout(function() {
+      document.querySelector('#background').remove();
+    }, 8000);
+  }, 8000);
+})
 
 //VIDEO CALLBACK
 const video = document.querySelector('#section0 video');
 const terminal = document.querySelector('#AboutDevTypeText');
 
-// réagir en cliquant sur une touche à l'écran d'accueil
-// document.addEventListener('keydown', e => {
-// if (e.key === "y" || e.key === "Y") {
-//   terminal.innerHTML = "↑ flash ↓ tv ← melodies → note";
-//   }
-// if (e.key === "n" || e.key === "N") {
-//   video.pause();
-//   }
-// })
+/////////////////////////// Callback jquery pour set le temps du loader (ancien)
+// $(document).ready(function() {
+//   // Fakes the loading setting a timeout
+//     setTimeout(function() {
+//         $('body').addClass('loaded');
+//     }, 25000);
+// });
 
-// Callback jquery pour set le temps du loader
-$(document).ready(function() {
-  // Fakes the loading setting a timeout
-    setTimeout(function() {
-        $('body').addClass('loaded');
-    }, 12000);
-});
 
-// setTimeout(function() {
-//   fullpage_api.silentMoveTo(2);
-//   }, 5000);
-
+////////////////////MODAL VIDEO CODE
 /**
  * Modules in this bundle
  * @license
@@ -416,5 +401,4 @@ var triggerEvent = exports.triggerEvent = function triggerEvent(el, eventName, o
 
 new ModalVideo('.js-modal-youtube');
 new ModalVideo('.js-modal-vimeo', {channel: 'vimeo'});
-
 

@@ -10,15 +10,7 @@
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
         crossorigin="anonymous"></script>
     <script type="text/javascript">
-      function goToAnchor() {
-        setTimeout(function() {
-          fullpage_api.silentMoveTo(2,1);
-          gsap.to("#background", {duration: 6, delay: 1, opacity: 0});
-          setTimeout(function() {
-            document.querySelector('#background').remove();
-            }, 6000);
-        }, 6000);
-      }
+
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.5/fullpage.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet">
@@ -29,7 +21,7 @@
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
   </head>
 
-  <body onload=goToAnchor()>
+  <body>
     <%= yield %>
     <div class="cursor"></div>
     <%= javascript_include_tag 'application' %>
@@ -51,7 +43,6 @@
         anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
         navigation:true,
         slidesNavigation: true,
-        // scrollHorizontally: true,
         navigationTooltips: ['f l a s h', '', 't v'],
         showActiveTooltip: true,
         scrollOverflow: true,
@@ -148,7 +139,8 @@
             } else {
               setTimeout(function() {
                 gsap.to(".ClassCSS", {duration: 0.2, x: 400, opacity: 0});
-              }, 1500);            }
+              }, 1500);
+            }
         }
     });
     </script>
