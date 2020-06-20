@@ -94,8 +94,7 @@ bigpic5.addEventListener("mouseover", (event) => {
   };
 });
 
-//full screen img onclick with modals
-// Get the modal
+//////////MODALM GALLERY 1
 var modal = document.getElementById("myModal");
 
 // Get the image and insert it inside the modal - use its "alt" text as a caption
@@ -107,6 +106,8 @@ img.onclick = function(){
   modalImg.src = this.src;
   // captionText.innerHTML = this.alt;
 }
+
+////////////////////Code pour faire grossir les images de la gallery 2
 
 var modal2 = document.getElementById("myModal2");
 
@@ -124,6 +125,8 @@ img2.forEach(img => img.addEventListener("mouseover", (event) => {
   }, 3000);
 }));
 
+////////////////////Code pour faire grossir les images de la gallery 3
+
 var img3 = document.querySelectorAll(".myImg3");
 img3.forEach(img => img.addEventListener("click", (event) => {
   // modal2.style.display = "block";
@@ -140,24 +143,43 @@ bigpic5.addEventListener("click", (event) => {
   setTimeout(function() {
     bigpic5.style.height = "500px";
   }, 3000);
-})
+});
+
+//////////////Code pour faire grossir images gallery 4
+
+var modal4 = document.getElementById("myModal4");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img4 = document.querySelectorAll(".myImg4");
+var modalImg4 = document.getElementById("img04");
+// var captionText2 = document.getElementById("caption2");
+img4.forEach(img => img.addEventListener("click", (event) => {
+  console.log(event.currentTarget.src);
+  modal4.style.display = "block";
+  modalImg4.src = event.currentTarget.src;
+  // captionText.innerHTML = this.alt;
+}));
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
-// var span2 = document.getElementsByClassName("close")[1];
+console.log(span);
+var span2 = document.getElementsByClassName("close")[1];
+console.log(span2);
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
   modal.style.display = "none";
 }
-// span2.onclick = function() {
-//   modal.style.display = "none";
-// }
+span2.onclick = function() {
+  modal4.style.display = "none";
+}
 
+
+////////fermer les modals en appuyant sur la touche échap
 document.addEventListener('keyup', logKey);
 function logKey(e) {
   if (e.keyCode === 27) {
     modal.style.display = "none";
-    // modal2.style.display = "none";
+    modal4.style.display = "none";
     }
 }
