@@ -36,7 +36,6 @@ const terminal = document.querySelector('#AboutDevTypeText');
 //     }, 25000);
 // });
 
-
 ////////////////////MODAL VIDEO CODE
 /**
  * Modules in this bundle
