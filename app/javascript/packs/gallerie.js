@@ -11,24 +11,29 @@ const pics4 = document.querySelectorAll(".pic4 img");
 const pics5 = document.querySelectorAll(".pic5 img");
 
 pics1.forEach(pic => pic.addEventListener("mouseover", (event) => {
+  if (event.currentTarget.alt === "horizontal") {
+    bigpic1.classList.add("horizontal");
+  } else {
+    bigpic1.classList.remove("horizontal");
+  };
   bigpic1.src = event.currentTarget.src;
 }));
 
-pics2.forEach(pic => pic.addEventListener("mouseover", (event) => {
-  bigpic2.src = event.currentTarget.src;
-}));
+// pics2.forEach(pic => pic.addEventListener("mouseover", (event) => {
+//   bigpic2.src = event.currentTarget.src;
+// }));
 
-pics3.forEach(pic => pic.addEventListener("mouseover", (event) => {
-  bigpic3.src = event.currentTarget.src;
-}));
+// pics3.forEach(pic => pic.addEventListener("mouseover", (event) => {
+//   bigpic3.src = event.currentTarget.src;
+// }));
 
 // pics4.forEach(pic => pic.addEventListener("mouseover", (event) => {
 //   bigpic4.src = event.currentTarget.src;
 // }));
 
-pics5.forEach(pic => pic.addEventListener("mouseover", (event) => {
-  bigpic5.src = event.currentTarget.src;
-}));
+// pics5.forEach(pic => pic.addEventListener("mouseover", (event) => {
+//   bigpic5.src = event.currentTarget.src;
+// }));
 
 
 //bigpic5 code there
@@ -128,6 +133,12 @@ img2.forEach(img => img.addEventListener("mouseover", (event) => {
 ////////////////////Code pour faire grossir les images de la gallery 3
 
 var img3 = document.querySelectorAll(".myImg3");
+img3.forEach(img => img.addEventListener("mouseover", (event) => {
+  event.currentTarget.style.opacity = "0.4";
+}));
+img3.forEach(img => img.addEventListener("mouseleave", (event) => {
+  event.currentTarget.style.opacity = "1";
+}));
 img3.forEach(img => img.addEventListener("click", (event) => {
   // modal2.style.display = "block";
   // modalImg2.src = event.currentTarget.src;

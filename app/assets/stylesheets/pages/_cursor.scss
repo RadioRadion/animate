@@ -1,17 +1,18 @@
-// body {
-//   cursor: none;
-// }
+body {
+  cursor: none;
+}
 
 .cursor {
     width: 20px;
     height: 20px;
-    border: 1px solid red;
+    border: 1px solid $yellow;
     border-radius: 50%;
     position: absolute;
     transition-duration: 200ms;
     transition-timing-function: ease-out;
     animation: cursorAnim .5s infinite alternate;
     pointer-events: none;
+    z-index: 900;
 }
 
 .cursor::after {
@@ -19,7 +20,7 @@
     width: 20px;
     height: 20px;
     position: absolute;
-    border: 8px solid green;
+    border: 8px solid white;
     border-radius: 50%;
     opacity: .2;
     top: -1px;
@@ -60,7 +61,7 @@
 
 .expand {
     animation: cursorAnim3 .5s forwards;
-    border: 1px solid yellow;
+    border: 1px solid $yellow;
 }
 
 p {

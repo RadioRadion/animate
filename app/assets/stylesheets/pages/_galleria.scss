@@ -38,15 +38,22 @@
 
 .myImg3 {
   margin: 20px;
-  cursor: pointer;
+  // cursor: pointer;
 }
 
-#bigpic1 {
-  cursor: pointer;
-}
+// #bigpic1 {
+//   cursor: pointer;
+// }
 
 #bigpic5 {
-  cursor: pointer;
+  // cursor: pointer;
+  width: 750px;
+  position: relative;
+}
+
+.myImg5 {
+  margin: 0 auto;
+  position: absolute;
 }
 
 .over {
@@ -54,10 +61,20 @@
 }
 
  /* Style the Image Used to Trigger the Modal */
-#myImg2 {
-  cursor: pointer;
+.myImg2 {
+  // cursor: pointer;
   transition: 0.3s;
 }
+
+@media (max-width: 720px) {
+  .horizontal{
+    transform: rotate(90deg);
+    height: 333px !important;
+    margin: 82px auto;
+  }
+}
+
+
 
 #myImg:hover {opacity: 0.7;}
 
@@ -120,9 +137,9 @@
 
 .close:hover,
 .close:focus {
-  color: #bbb;
+  color: $yellow;
   text-decoration: none;
-  cursor: pointer;
+  // cursor: pointer;
 }
 
 /* 100% Image Width on Smaller Screens */

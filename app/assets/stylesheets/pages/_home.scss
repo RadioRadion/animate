@@ -13,10 +13,13 @@
 
 #map {
 font-family: monospace;
+margin-bottom: 30px;
 }
 
-#map{
-  margin-bottom: 35px;
+@media (max-width: 540px) {
+  #map {
+    font-size: 15px;
+  }
 }
 
 #background {
