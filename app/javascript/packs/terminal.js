@@ -1,6 +1,6 @@
 var data = [
   {
-    AboutDevTypeText: "<span>AGONE STUDIO<br/><br/>uploading your trip<br/>. . . . . . . . . . . . . . . . . .</span><br/>"
+    AboutDevTypeText: "<span>AGONE STUDIO<br/><br/>uploading your trip<br/>. . . . . . . . . . . . . . . . . . . . . .</span><br/>"
   }
 ];
 
@@ -22,7 +22,7 @@ var allElements = document.getElementsByClassName("typeing");
       if (char === "<") isTag = true;
       if (char === ">") isTag = false;
       if (isTag) return type();
-      setTimeout(type, 120);
+      setTimeout(type, 150);
     })();
   }
 }, 2000);
