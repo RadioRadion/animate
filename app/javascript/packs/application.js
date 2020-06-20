@@ -2,12 +2,16 @@ import "bootstrap";
 
 ////////////////Fonction déclancheuse du site
 window.addEventListener('load', function () {
-    gsap.fromTo("#fp-nav", {x: 300, opacity: 0}, {duration: 18, x: 0, opacity: 1});
-    // gsap.from("#fp-nav", {duration: 15, x: 300, opacity: 0});
-    gsap.from(".fp-bottom", {duration: 18, y: 300, opacity: 0});
+  let tooltip = document.querySelector('.fp-tooltip');
+  tooltip.style.opacity = 0;
+  gsap.fromTo("#fp-nav", {x: 300, opacity: 0}, {duration: 18, x: 0, opacity: 1});
+  gsap.from(".fp-bottom", {duration: 18, y: 300, opacity: 0});
   setTimeout(function() {
+    tooltip.style.opacity = 1;
     //On bouge en sneaky sur le mid
     fullpage_api.silentMoveTo(2,1);
+    gsap.from(".fp-prev", {duration: 7, x: -100, opacity: 0, scale: 0.1});
+    gsap.from(".fp-next", {duration: 7, x: 100, opacity: 0, scale: 0.1});
     //On fait disparaître le noir
     gsap.to("#background", {duration: 6, delay: 1, opacity: 0});
     //On ajoute la class loaded pour retirer le loader de la première section
