@@ -2,9 +2,9 @@ import "bootstrap";
 
 ////////////////Fonction déclancheuse du site
 window.addEventListener('load', function () {
-    gsap.fromTo("#fp-nav", {x: 300, opacity: 0}, {duration: 20, x: 0, opacity: 1});
+    gsap.fromTo("#fp-nav", {x: 300, opacity: 0}, {duration: 18, x: 0, opacity: 1});
     // gsap.from("#fp-nav", {duration: 15, x: 300, opacity: 0});
-    gsap.from(".fp-bottom", {duration: 20, y: 300, opacity: 0});
+    gsap.from(".fp-bottom", {duration: 18, y: 300, opacity: 0});
   setTimeout(function() {
     //On bouge en sneaky sur le mid
     fullpage_api.silentMoveTo(2,1);
