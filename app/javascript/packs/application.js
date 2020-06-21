@@ -1,5 +1,6 @@
 import "bootstrap";
 const date1 = new Date().getTime();
+
 ////////////////Fonction déclancheuse du site
 window.addEventListener('load', function (e) {
   //on calcule le temps de chargement pour le soustraire au chargement final pour avoir le temps de fake load
