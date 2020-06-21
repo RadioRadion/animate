@@ -21,7 +21,7 @@ window.addEventListener('load', function () {
     setTimeout(function() {
       document.querySelector('#background').remove();
     }, 8000);
-  }, 8000);
+  }, 1000);
 })
 
 //VIDEO CALLBACK
