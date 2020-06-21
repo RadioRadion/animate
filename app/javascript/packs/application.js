@@ -5,6 +5,7 @@ window.addEventListener('load', function (e) {
   //on calcule le temps de chargement pour le soustraire au chargement final pour avoir le temps de fake load
   const date2 = new Date().getTime();
   const loading = 10000 - (date2 - date1);
+  ///on cache le menu qui arrive en sneacky sur la gauche
   let tooltip = document.querySelector('.fp-tooltip');
   tooltip.style.opacity = 0;
   gsap.fromTo("#fp-nav", {x: 300, opacity: 0}, {duration: 18, x: 0, opacity: 1});

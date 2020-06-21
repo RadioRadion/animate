@@ -38,17 +38,26 @@ pics1.forEach(pic => pic.addEventListener("mouseover", (event) => {
 
 //bigpic5 code there
 let count5 = 1;
-bigpic5.addEventListener("mouseover", (event) => {
+document.querySelectorAll(".myImg5").forEach(pic => pic.addEventListener("click", (event) => {
   if (count5 === 8) { count5 = 0 };
   count5 += 1;
   if (count5 === 1 ) {
+    ///On affiche toutes les photos à la suite mais qu'une à la fois avec la propriéré display)
+    setTimeout(function() {
+      document.getElementById("photo1").style.display = "inline";
+      document.getElementById("photo8").style.display = "none";
+    }, 1000);
     gsap.to("#bigpic5", {duration: 1, x: -100, opacity: 0});
     setTimeout(function() {
-      bigpic5.src = `assets/photos/resize/paysage/rural/01.jpg`;
+      // bigpic5.src = `assets/photos/resize/paysage/rural/01.jpg`;
       gsap.to("#bigpic5", {duration: 1, x: 0, opacity: 1});
     }, 1000);
   };
   if (count5 === 2 ) {
+    setTimeout(function() {
+      document.getElementById("photo2").style.display = "inline";
+      document.getElementById("photo1").style.display = "none";
+    }, 1000);
     gsap.to("#bigpic5", {duration: 1, x: 100, opacity: 0});
     setTimeout(function() {
       // bigpic5.src = `assets/photos/resize/paysage/rural/02.jpg`;
@@ -56,6 +65,10 @@ bigpic5.addEventListener("mouseover", (event) => {
     }, 1000);
   };
   if (count5 === 3 ) {
+    setTimeout(function() {
+      document.getElementById("photo3").style.display = "inline";
+      document.getElementById("photo2").style.display = "none";
+    }, 1000);
     gsap.to("#bigpic5", {duration: 1, x: -100, opacity: 0});
     setTimeout(function() {
       // bigpic5.src = `assets/photos/resize/paysage/rural/03.jpg`;
@@ -63,41 +76,69 @@ bigpic5.addEventListener("mouseover", (event) => {
     }, 1000);
   };
   if (count5 === 4 ) {
+    setTimeout(function() {
+      document.getElementById("photo4").style.display = "inline";
+      document.getElementById("photo3").style.display = "none";
+    }, 1000);
     gsap.to("#bigpic5", {duration: 1, x: 100, opacity: 0});
     setTimeout(function() {
-      bigpic5.src = `assets/photos/resize/paysage/rural/04.jpg`;
+      // bigpic5.src = `assets/photos/resize/paysage/rural/04.jpg`;
       gsap.to("#bigpic5", {duration: 1, x: 0, opacity: 1});
     }, 1000);
   };
   if (count5 === 5 ) {
+    setTimeout(function() {
+      document.getElementById("photo5").style.display = "inline";
+      document.getElementById("photo4").style.display = "none";
+    }, 1000);
     gsap.to("#bigpic5", {duration: 1, x: -100, opacity: 0});
     setTimeout(function() {
-      bigpic5.src = `assets/photos/resize/paysage/urbain/01.jpg`;
+      // bigpic5.src = `assets/photos/resize/paysage/urbain/01.jpg`;
       gsap.to("#bigpic5", {duration: 1, x: 0, opacity: 1});
     }, 1000);
   };
   if (count5 === 6 ) {
+    setTimeout(function() {
+      document.getElementById("photo6").style.display = "inline";
+      document.getElementById("photo5").style.display = "none";
+    }, 1000);
     gsap.to("#bigpic5", {duration: 1, x: 100, opacity: 0});
     setTimeout(function() {
-      bigpic5.src = `assets/photos/resize/paysage/urbain/02.jpg`;
+      // bigpic5.src = `assets/photos/resize/paysage/urbain/02.jpg`;
       gsap.to("#bigpic5", {duration: 1, x: 0, opacity: 1});
     }, 1000);
   };
   if (count5 === 7 ) {
+    setTimeout(function() {
+        document.getElementById("photo7").style.display = "inline";
+        document.getElementById("photo6").style.display = "none";
+    }, 1000);
     gsap.to("#bigpic5", {duration: 1, x: -100, opacity: 0});
     setTimeout(function() {
-      bigpic5.src = `assets/photos/resize/paysage/urbain/03.jpg`;
+      // bigpic5.src = `assets/photos/resize/paysage/urbain/03.jpg`;
       gsap.to("#bigpic5", {duration: 1, x: 0, opacity: 1});
     }, 1000);
   };
   if (count5 === 8 ) {
+    setTimeout(function() {
+      document.getElementById("photo8").style.display = "inline";
+      document.getElementById("photo7").style.display = "none";
+    }, 1000);
     gsap.to("#bigpic5", {duration: 1, x: 100, opacity: 0});
     setTimeout(function() {
-      bigpic5.src = `assets/photos/resize/paysage/urbain/04.jpg`;
+      // bigpic5.src = `assets/photos/resize/paysage/urbain/04.jpg`;
       gsap.to("#bigpic5", {duration: 1, x: 0, opacity: 1});
     }, 1000);
   };
-});
+}));
+
+/////pour grandir l'aimge onclick
+// bigpic5.addEventListener("click", (event) => {
+//   bigpic5.style.height = "100vh";
+//   setTimeout(function() {
+//     bigpic5.style.height = "500px";
+//   }, 3000);
+// });
 
 //////////MODALM GALLERY 1
 var modal = document.getElementById("myModal");
@@ -148,13 +189,6 @@ img3.forEach(img => img.addEventListener("click", (event) => {
     img.style.height = "500px";
   }, 3000);
 }));
-
-bigpic5.addEventListener("click", (event) => {
-  bigpic5.style.height = "100vh";
-  setTimeout(function() {
-    bigpic5.style.height = "500px";
-  }, 3000);
-});
 
 //////////////Code pour faire grossir images gallery 4
 

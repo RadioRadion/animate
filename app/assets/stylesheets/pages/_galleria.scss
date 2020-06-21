@@ -48,12 +48,20 @@
 #bigpic5 {
   // cursor: pointer;
   width: 750px;
-  position: relative;
+  height: 500px;
+  // position: relative;
+  margin: 0 auto;
 }
 
 .myImg5 {
-  margin: 0 auto;
-  position: absolute;
+  // position: absolute;
+  // opacity: 0;
+  display: none;
+}
+
+#photo1 {
+  opacity: 1;
+  display: inline;
 }
 
 .over {
