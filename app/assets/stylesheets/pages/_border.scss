@@ -17,6 +17,22 @@ $blue: #0eb7da;
   font-size: 100px;
 }
 
+@media (max-width: 960px) {
+  .form-group label {
+    font-size: 68px;
+    margin-top: 25px;
+  }
+}
+
+@media (max-width: 720px) {
+  .form-group label {
+    font-size: 40px;
+    margin-top: 25px;
+  }
+}
+
+
+
 .form-group {
   margin: 0 !important;
 }

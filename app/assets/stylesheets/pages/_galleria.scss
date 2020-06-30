@@ -23,6 +23,12 @@
   }
 }
 
+@media screen and (max-width: 540px) {
+  .d-flex {
+    flex-direction: column;
+  }
+}
+
 .pic img {
   height: 45px;
   width: 45px;
@@ -38,15 +44,15 @@
 
 .myImg3 {
   margin: 20px;
-  // cursor: pointer;
+  cursor: pointer;
 }
 
-// #bigpic1 {
-//   cursor: pointer;
-// }
+#bigpic1 {
+  cursor: pointer;
+}
 
 #bigpic5 {
-  // cursor: pointer;
+  cursor: pointer;
   // position: relative;
   margin: 0 auto;
 }
@@ -68,7 +74,7 @@
 
  /* Style the Image Used to Trigger the Modal */
 .myImg2 {
-  // cursor: pointer;
+  cursor: pointer;
   transition: 0.3s;
 }
 
@@ -145,7 +151,7 @@
 .close:focus {
   color: $yellow;
   text-decoration: none;
-  // cursor: pointer;
+  cursor: pointer;
 }
 
 /* 100% Image Width on Smaller Screens */

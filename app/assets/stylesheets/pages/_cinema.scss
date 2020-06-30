@@ -17,9 +17,11 @@
        text-shadow: 0 0 5px rgba(0,0,0,0.5);
     }
 
-    // .play {
-    //   cursor: pointer;
-    // }
+    @media (max-width: 540px) {
+      .play {
+        font-size: 20px !important;
+      }
+    }
 
     .panels {
       min-height: 100vh;
