@@ -28,46 +28,59 @@ h1 {
   }
 }
 
+// #test {
+//   width: 50px;
+//   height: 50px;
+
+//   display: block;
+//   position: relative;
+//   background-color: red;
+// }
+
 
 #loader {
+  background-image: url(asset-path("agone.gif"));
+  background-size: cover;
+  background-position: center;
+  object-fit: center;
   display: block;
   position: relative;
-  left: 50%;
-  top: 50%;
-  width: 150px;
-  height: 150px;
-  margin: -75px 0 0 -75px;
-  border-radius: 50%;
-  border: 3px solid transparent;
-  border-top-color: $yellow;
-  animation: spin 1.7s linear infinite;
+  top: 25%;
+  width: 250px;
+  height: 38%;
+  margin: 31px auto;
+  // margin: -75px 0 0 -75px;
+  // border-radius: 50%;
+  // border: 3px solid transparent;
+  // border-top-color: $yellow;
+  // animation: spin 1.7s linear infinite;
   z-index: 11;
 
-  &:before {
-    content: "";
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    right: 5px;
-    bottom: 5px;
-    border-radius: 50%;
-    border: 3px solid transparent;
-    border-top-color: $yellow;
-    animation: spin-reverse .6s linear infinite;
-  }
+  // &:before {
+  //   content: "";
+  //   position: absolute;
+  //   top: 5px;
+  //   left: 5px;
+  //   right: 5px;
+  //   bottom: 5px;
+  //   border-radius: 50%;
+  //   border: 3px solid transparent;
+  //   border-top-color: $yellow;
+  //   animation: spin-reverse .6s linear infinite;
+  // }
 
-  &:after {
-    content: "";
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    right: 15px;
-    bottom: 15px;
-    border-radius: 50%;
-    border: 3px solid transparent;
-    border-top-color: $yellow;
-    animation: spin 1s linear infinite;
-  }
+  // &:after {
+  //   content: "";
+  //   position: absolute;
+  //   top: 15px;
+  //   left: 15px;
+  //   right: 15px;
+  //   bottom: 15px;
+  //   border-radius: 50%;
+  //   border: 3px solid transparent;
+  //   border-top-color: $yellow;
+  //   animation: spin 1s linear infinite;
+  // }
 }
 
 // Bourbon mixins

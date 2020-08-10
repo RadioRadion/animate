@@ -55,7 +55,6 @@
 }
 
 #bigpic5 {
-  cursor: pointer;
   // position: relative;
   margin: 0 auto;
 }
@@ -63,6 +62,7 @@
 .myImg5 {
   // position: absolute;
   // opacity: 0;
+  cursor: pointer;
   display: none;
 }
 
@@ -88,7 +88,9 @@
     margin: 82px auto;
   }
 }
-
+.myImg4 {
+  cursor: pointer;
+}
 
 
 #myImg:hover {opacity: 0.7;}
