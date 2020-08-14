@@ -39,7 +39,10 @@ pics1.forEach(pic => pic.addEventListener("mouseover", (event) => {
 //bigpic5 code there
 let count5 = 1;
 document.querySelectorAll(".myImg5").forEach(pic => pic.addEventListener("click", (event) => {
-  if (count5 === 8) { count5 = 0 };
+  if (count5 === 16) {
+    document.getElementById("photo16").style.display = "none";
+    count5 = 0
+  };
   count5 += 1;
   if (count5 === 1 ) {
     ///On affiche toutes les photos à la suite mais qu'une à la fois avec la propriéré display)
@@ -123,6 +126,95 @@ document.querySelectorAll(".myImg5").forEach(pic => pic.addEventListener("click"
     setTimeout(function() {
       document.getElementById("photo8").style.display = "inline";
       document.getElementById("photo7").style.display = "none";
+    }, 1000);
+    gsap.to("#bigpic5", {duration: 1, x: 100, opacity: 0});
+    setTimeout(function() {
+      // bigpic5.src = `assets/photos/resize/paysage/urbain/04.jpg`;
+      gsap.to("#bigpic5", {duration: 1, x: 0, opacity: 1});
+    }, 1000);
+  };
+  if (count5 === 9 ) {
+    ///On affiche toutes les photos à la suite mais qu'une à la fois avec la propriéré display)
+    setTimeout(function() {
+      document.getElementById("photo9").style.display = "inline";
+      document.getElementById("photo8").style.display = "none";
+    }, 1000);
+    gsap.to("#bigpic5", {duration: 1, x: -100, opacity: 0});
+    setTimeout(function() {
+      // bigpic5.src = `assets/photos/resize/paysage/rural/01.jpg`;
+      gsap.to("#bigpic5", {duration: 1, x: 0, opacity: 1});
+    }, 1000);
+  };
+  if (count5 === 10 ) {
+    setTimeout(function() {
+      document.getElementById("photo10").style.display = "inline";
+      document.getElementById("photo9").style.display = "none";
+    }, 1000);
+    gsap.to("#bigpic5", {duration: 1, x: 100, opacity: 0});
+    setTimeout(function() {
+      // bigpic5.src = `assets/photos/resize/paysage/rural/02.jpg`;
+      gsap.to("#bigpic5", {duration: 1, x: 0, opacity: 1});
+    }, 1000);
+  };
+  if (count5 === 11 ) {
+    setTimeout(function() {
+      document.getElementById("photo11").style.display = "inline";
+      document.getElementById("photo10").style.display = "none";
+    }, 1000);
+    gsap.to("#bigpic5", {duration: 1, x: -100, opacity: 0});
+    setTimeout(function() {
+      // bigpic5.src = `assets/photos/resize/paysage/rural/03.jpg`;
+      gsap.to("#bigpic5", {duration: 1, x: 0, opacity: 1});
+    }, 1000);
+  };
+  if (count5 === 12 ) {
+    setTimeout(function() {
+      document.getElementById("photo12").style.display = "inline";
+      document.getElementById("photo11").style.display = "none";
+    }, 1000);
+    gsap.to("#bigpic5", {duration: 1, x: 100, opacity: 0});
+    setTimeout(function() {
+      // bigpic5.src = `assets/photos/resize/paysage/rural/04.jpg`;
+      gsap.to("#bigpic5", {duration: 1, x: 0, opacity: 1});
+    }, 1000);
+  };
+  if (count5 === 13 ) {
+    setTimeout(function() {
+      document.getElementById("photo13").style.display = "inline";
+      document.getElementById("photo12").style.display = "none";
+    }, 1000);
+    gsap.to("#bigpic5", {duration: 1, x: -100, opacity: 0});
+    setTimeout(function() {
+      // bigpic5.src = `assets/photos/resize/paysage/urbain/01.jpg`;
+      gsap.to("#bigpic5", {duration: 1, x: 0, opacity: 1});
+    }, 1000);
+  };
+  if (count5 === 14 ) {
+    setTimeout(function() {
+      document.getElementById("photo14").style.display = "inline";
+      document.getElementById("photo13").style.display = "none";
+    }, 1000);
+    gsap.to("#bigpic5", {duration: 1, x: 100, opacity: 0});
+    setTimeout(function() {
+      // bigpic5.src = `assets/photos/resize/paysage/urbain/02.jpg`;
+      gsap.to("#bigpic5", {duration: 1, x: 0, opacity: 1});
+    }, 1000);
+  };
+  if (count5 === 15 ) {
+    setTimeout(function() {
+        document.getElementById("photo15").style.display = "inline";
+        document.getElementById("photo14").style.display = "none";
+    }, 1000);
+    gsap.to("#bigpic5", {duration: 1, x: -100, opacity: 0});
+    setTimeout(function() {
+      // bigpic5.src = `assets/photos/resize/paysage/urbain/03.jpg`;
+      gsap.to("#bigpic5", {duration: 1, x: 0, opacity: 1});
+    }, 1000);
+  };
+  if (count5 === 16 ) {
+    setTimeout(function() {
+      document.getElementById("photo16").style.display = "inline";
+      document.getElementById("photo15").style.display = "none";
     }, 1000);
     gsap.to("#bigpic5", {duration: 1, x: 100, opacity: 0});
     setTimeout(function() {
