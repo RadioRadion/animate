@@ -1,6 +1,6 @@
 var data = [
   {
-    AboutDevTypeText: "<span>uploading your trip</span><br/>"
+    AboutDevTypeText: "<span>uploading your trip...(puts sounds ON))"
   }
 ];
 
@@ -22,7 +22,7 @@ var allElements = document.getElementsByClassName("typeing");
       if (char === "<") isTag = true;
       if (char === ">") isTag = false;
       if (isTag) return type();
-      setTimeout(type, 240);
+      setTimeout(type, 100);
     })();
   }
 }, 2000);

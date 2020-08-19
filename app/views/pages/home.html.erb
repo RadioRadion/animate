@@ -324,6 +324,7 @@
       <div class="rallonge"></div>
     </div>
     <div class="slide" id="slide1">
+      <%= audio_tag("hipbreak.mp3", id: "myAudio") %>
       <div id="background">
       </div>
         <%= video_tag "1393.mp4", id: "myVideo", loop: "", muted: "", type: "" "video/mp4", data: { autoplay: "null" } %>
@@ -332,25 +333,72 @@
     </div>
 
     <div class="slide" id="slide2a">
+      <h2></h2>
+      <p class="contact-text" id="text-left"><span class="text-yellow">Hi</span>,
+
+      this trip started about 7 years ago, approaching Earth smoothly and surely.
+
+      I am pleased to see you here,  currently cruising in my studio.
+      I have gathered here main of my artistic creations, it is all about vibrations.
+
+      I have arranged my vessel like a museum, in which I invite everyone to lose himself. Throughout the visit of this spaceship, you shall find plenty treasures which all only aims to inspire you
+      <br>
+      Have a sensorial trip
+      </p>
+      <p class="contact-text" id="text-right"><span class="text-yellow">US / COLLAB</span><br><br>
+
+      Which what where who ever you are, i am pretty sure ideas are floating in here
+
+      Hit me up so that we carry the next step to create a solar bomb
+      <br><br>
+      See you around her
+      </p>
       <div class="row" style="justify-content: center;">
-        <form action="https://formspree.io/xrgapyzy" method="POST">
-         <div class="form-group">
-          <label style="width: 100%;">
-            e m a i l:
+        <form action="https://formspree.io/xrgapyzy" method="POST" id="form-contact" style="width: 45%;">
+          <div class="form-group">
+            <label style="width: 100%; font-size: 32px;">email</label>
             <input class="form-control" type="text" name="_replyto" style="text-align: center;">
-          </label>
-        </div>
-        <div class="form-group">
-          <label>
-            m e s s a g e:
+          </div>
+          <div class="form-group">
+            <label style="width: 100%; font-size: 32px;">message</label>
             <textarea class="form-control" name="message" style="max-height: 150px;"></textarea>
-          </label>
-        </div>
-        <br>
-        <button type="submit" class="spin circle real">S E N D</button>
-      </form>
+          </div>
+          <br>
+          <button type="submit" class="spin circle real">S E N D</button>
+        </form>
       </div>
-      <!-- <div class="rallonge"></div> -->
+      <div class="container">
+        <div class="row flex-wrap">
+          <div class="col-lg-1"><%= image_tag('francois.jpg') %></div>
+          <div class="col-lg-11"><p id="photo-text">
+            As Richie Hawtin once told me : “pleasure, always pleasure my friend”
+
+            Pleasure can be created, but always from what already exists...
+
+            I reveal to you with a hint of mischief some of my tracks for some already composed 7 years ago
+
+            Since then, water has flowed under the bridge and the style has changed to something even more sensual, dreamlike and realistic, with inspirations and flavors of the world.
+
+            Music being both a personal and universal language, and draws a circle. Each music is a universe which allows us to bow this circle. And as miscomprehension pulls attention, there’s probably in those worlds a light mystery being finally our little secret of each, and everyone.
+            However, this dichotomy of frequencies stealing with verve the sense of words. A relation where it would not occur any particular line, direction, goal. If not a certain hope that makes pulse my heart in each of these adventures.
+
+            Thus, each note is shaped to make the most sense and mingle with the dance of the others. Harmonies reveal a power without superiority, a place where each element is linked, no due to hazard but a common destiny
+
+            The liberty of expression felt through composition goes beyond the physical relationships. Each music is of a pure philanthropic egoisme ; an opened door heterotopy.
+            And our constant research leads us to new lands, into new microcosms with many languages.
+
+            Adding words might stifle our imagination. Free to you to feel.
+            <br>
+            Great adventures
+            <br>
+            <br>
+            AGONE
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="rallonge"></div>
     </div>
   </div>
 

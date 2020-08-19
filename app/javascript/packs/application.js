@@ -19,10 +19,14 @@ window.addEventListener('load', function (e) {
     gsap.from(".fp-next", {duration: 7, x: 100, opacity: 0, scale: 0.1});
     //On fait disparaître le noir
     gsap.to("#background", {duration: 6, delay: 1, opacity: 0});
+
+    //on joue le son
     //On ajoute la class loaded pour retirer le loader de la première section
     var body = document.body;
     body.classList.add("loaded");
     ///////////////////Animation fondue des menus
+    var x = document.getElementById("myAudio");
+    x.play();
     setTimeout(function() {
       document.querySelector('#background').remove();
     }, 8000);
