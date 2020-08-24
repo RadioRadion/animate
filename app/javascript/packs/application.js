@@ -25,8 +25,6 @@ window.addEventListener('load', function (e) {
     var body = document.body;
     body.classList.add("loaded");
     ///////////////////Animation fondue des menus
-    var x = document.getElementById("myAudio");
-    x.play();
     setTimeout(function() {
       document.querySelector('#background').remove();
     }, 8000);
@@ -36,6 +34,13 @@ window.addEventListener('load', function (e) {
 //VIDEO CALLBACK
 const video = document.querySelector('#section0 video');
 const terminal = document.querySelector('#AboutDevTypeText');
+
+
+//Jouer le son sur la page de garde
+var x = document.getElementById("myAudio");
+function play () {
+  x.play();
+}
 
 /////////////////////////// Callback jquery pour set le temps du loader (ancien)
 // $(document).ready(function() {
