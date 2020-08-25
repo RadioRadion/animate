@@ -34,3 +34,30 @@
 .text-yellow {
   text-shadow: rgba(255, 251, 6, 1) 1px 2px;
 }
+
+.footer {
+  margin-top: 32px;
+}
+
+.footer p {
+  font-family: monospace, "Helvetica", "sans-serif";
+  font-size: 16px;
+}
+
+.footer i {
+  font-size: 64px;
+  color: white;
+}
+
+.footer i:hover {
+  color: $yellow;
+}
+
+#val {
+  text-decoration: none;
+  color: white;
+}
+
+#val:hover {
+  color: $yellow;
+}
