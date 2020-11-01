@@ -1,6 +1,6 @@
 var data = [
   {
-    AboutDevTypeText: "<span>uploading your trip...(SOUNDS RECOMMANDED))"
+    AboutDevTypeText: "<span>uploading your trip...(SOUND RECOMMANDED))"
   }
 ];
 
