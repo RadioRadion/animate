@@ -4,7 +4,7 @@
   "dependencies": {
     "@rails/webpacker": "4.2.2",
     "bootstrap": "^4.4.1",
-    "fullpage.js": "^3.0.8",
+    "fullpage.js": "^4.0.5",
     "jquery": "^3.4.1",
     "modal-video": "^2.4.2",
     "popper.js": "^1.16.1"
