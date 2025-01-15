@@ -17,7 +17,7 @@ services:
           name: animate_db
           property: connectionString
       - key: RAILS_MASTER_KEY
-        sync: false
+        value: c314c778fafa4c656215794616f1868f
       - key: RAILS_ENV
         value: production
       - key: RAILS_SERVE_STATIC_FILES
