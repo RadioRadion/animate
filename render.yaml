@@ -11,7 +11,7 @@ services:
     plan: free
     runtime: ruby
     buildCommand: bundle install && yarn install && bundle exec rake assets:precompile
-    runtimeVersion: 3.1.0
+    runtimeVersion: 3.3.0
     startCommand: bundle exec puma -C config/puma.rb
     envVars:
       - key: DATABASE_URL
