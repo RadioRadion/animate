@@ -1,0 +1,26 @@
+databases:
+  - name: animate_db
+    databaseName: animate_production
+    user: animate
+    plan: free
+
+services:
+  - type: web
+    name: animate
+    env: ruby
+    plan: free
+    buildCommand: bundle install && yarn install && bundle exec rake assets:precompile
+    startCommand: bundle exec puma -C config/puma.rb
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: animate_db
+          property: connectionString
+      - key: RAILS_MASTER_KEY
+        sync: false
+      - key: RAILS_ENV
+        value: production
+      - key: RAILS_SERVE_STATIC_FILES
+        value: true
+      - key: RAILS_LOG_TO_STDOUT
+        value: true
