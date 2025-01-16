@@ -26,3 +26,5 @@ services:
         value: true
       - key: RAILS_LOG_TO_STDOUT
         value: true
+      - key: NODE_OPTIONS
+        value: --openssl-legacy-provider
