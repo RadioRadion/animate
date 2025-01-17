@@ -12,7 +12,7 @@ services:
     runtime: ruby
     buildCommand: bundle install && yarn install && bundle exec rake assets:precompile
     runtimeVersion: 3.3.0
-    startCommand: bundle exec puma -C config/puma.rb
+    startCommand: bundle exec puma -C config/puma.rb -p ${PORT:-3000}
     envVars:
       - key: DATABASE_URL
         fromDatabase:
