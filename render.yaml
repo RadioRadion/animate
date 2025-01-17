@@ -10,7 +10,7 @@ services:
     env: ruby
     plan: free
     runtime: ruby
-    buildCommand: bundle install && yarn install && bundle exec rake assets:precompile
+    buildCommand: bundle install && yarn install && NODE_ENV=production bundle exec rake webpacker:compile && bundle exec rake assets:precompile
     runtimeVersion: 3.3.0
     startCommand: bundle exec puma -t 5:5 -w 2 -p ${PORT:-3000} --preload -e ${RACK_ENV:-production}
     envVars:
@@ -28,3 +28,5 @@ services:
         value: true
       - key: NODE_OPTIONS
         value: --openssl-legacy-provider
+      - key: NODE_ENV
+        value: production
