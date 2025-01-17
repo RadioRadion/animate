@@ -1,7 +1,95 @@
 import "bootstrap";
+import gsap from "gsap";
+import fullpage from "fullpage.js";
+import "fullpage.js/vendors/scrolloverflow";
+import IScroll from "fullpage.js/vendors/scrolloverflow";
+import "fullpage.js/dist/fullpage.css";
+
+// Make libraries available globally
+window.gsap = gsap;
+window.fullpage = fullpage;
+window.IScroll = IScroll;
+
 const date1 = new Date().getTime();
 
 ////////////////Fonction déclancheuse du site
+document.addEventListener('DOMContentLoaded', function() {
+  // Initialize fullpage.js
+  new window.fullpage('#fullpage', {
+    sectionsColor: ['#000000', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
+    anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
+    navigation: true,
+    slidesNavigation: true,
+    navigationTooltips: ['f l a s h', '', 't v'],
+    showActiveTooltip: true,
+    scrollOverflow: true,
+    scrollingSpeed: 1700,
+    menu: '#menu',
+    licenseKey: '7D72BD02-D9324668-A20A7371-BA347154',
+    afterResponsive: function(isResponsive){},
+    onLeave: function(origin, destination, direction){
+      var params = {
+        origin: origin,
+        destination: destination,
+        direction: direction
+      };
+      if (params.destination.anchor === "secondPage") {
+        if (params.origin.anchor === "firstPage") {
+          window.fullpage_api.moveSlideRight();
+        }
+        if (params.origin.anchor === "3rdPage") {
+          window.fullpage_api.moveSlideRight();
+        }
+      }
+    },
+    onSlideLeave: function(section, origin, destination, direction){
+      var params = {
+        section: section,
+        origin: origin,
+        destination: destination,
+        direction: direction
+      };
+      if (params.section.anchor === "secondPage" && params.destination.isFirst === true) {
+        gsap.to(".ClassCSS", {
+          duration: 1,
+          x: 0,
+          opacity: 1,
+          delay: 0.8,
+          stagger: 0.2,
+          ease: "expo",
+          force3D: true
+        });
+      } else {
+        setTimeout(function() {
+          gsap.to(".ClassCSS", {duration: 0.2, x: 400, opacity: 0});
+        }, 1500);
+      }
+    },
+    afterLoad: function(origin, destination, direction){
+      var params = {
+        origin: origin,
+        destination: destination,
+        direction: direction
+      };
+      if (params.destination.anchor === "secondPage" && params.destination.index === 1) {
+        gsap.to(".ClassCSS", {
+          duration: 1,
+          x: 0,
+          opacity: 1,
+          delay: 0.8,
+          stagger: 0.2,
+          ease: "expo",
+          force3D: true
+        });
+      } else {
+        setTimeout(function() {
+          gsap.to(".ClassCSS", {duration: 0.2, x: 400, opacity: 0});
+        }, 1500);
+      }
+    }
+  });
+});
+
 window.addEventListener('load', function (e) {
   //on calcule le temps de chargement pour le soustraire au chargement final pour avoir le temps de fake load
   const date2 = new Date().getTime();
@@ -418,4 +506,3 @@ var triggerEvent = exports.triggerEvent = function triggerEvent(el, eventName, o
 
 new ModalVideo('.js-modal-youtube');
 new ModalVideo('.js-modal-vimeo', {channel: 'vimeo'});
-

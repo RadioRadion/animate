@@ -3,23 +3,19 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
     <script src="https://kit.fontawesome.com/01d0996700.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/modal-video@2.4.8/css/modal-video.min.css">
     <script
         src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
         crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.5/vendors/scrolloverflow.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.5/fullpage.js"></script>
     <%= favicon_link_tag asset_path('favicon.png') %>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet">
     <title>Agone Studio</title>
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
-    <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
+    <%= stylesheet_pack_tag 'application', media: 'all' %>
   </head>
 
   <body>
@@ -33,115 +29,6 @@
     <%= javascript_pack_tag 'norefresh' %>
     <%= javascript_pack_tag 'cinema' %>
     <%= javascript_pack_tag 'iframe' %>
-
-<!--     //le script à lancer en fin de page
- -->
-    <script type="text/javascript">
-            var myFullpage = new fullpage('#fullpage', {
-        sectionsColor: ['#000000', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
-        anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
-        navigation:true,
-        slidesNavigation: true,
-        navigationTooltips: ['f l a s h', '', 't v'],
-        showActiveTooltip: true,
-        scrollOverflow: true,
-        scrollingSpeed: 1700,
-        menu: '#menu',
-        licenseKey: '7D72BD02-D9324668-A20A7371-BA347154',
-        afterResponsive: function(isResponsive){
-
-        },
-        onLeave: function(origin, destination, direction){
-            var params = {
-                origin: origin,
-                destination:destination,
-                direction: direction
-            };
-
-            // Pour faire arriver les flèches de côté tkrl
-            // if (params.destination.anchor === "secondPage") {
-            //   gsap.from(".fp-prev", {duration: 6, x: -50, opacity: 0, scale: 0.1});
-            //   gsap.from(".fp-next", {duration: 6, x: 50, opacity: 0, scale: 0.1});
-            // }
-            // if (params.destination.anchor === "3rdPage") {
-            //   gsap.from(".fp-prev", {duration: 6, x: -50, opacity: 0, scale: 0.1});
-            //   gsap.from(".fp-next", {duration: 6, x: 50, opacity: 0, scale: 0.1});
-            // }
-            // pour enlever le texte du terminal quand on quitte le lieu
-            // const terminal = document.querySelector('#AboutDevTypeText');
-            // terminal.innerHTML = "";
-
-            if (params.destination.anchor === "secondPage") {
-              if (params.origin.anchor === "firstPage") {
-                fullpage_api.moveSlideRight();
-              }
-              if (params.origin.anchor === "3rdPage") {
-                fullpage_api.moveSlideRight();
-              }
-            }
-        },
-        onSlideLeave: function(section, origin, destination, direction){
-            var params = {
-                section: section,
-                origin: origin,
-                destination: destination,
-                direction: direction
-            };
-            if (params.section.anchor === "secondPage" && params.destination.isFirst === true) {
-              // gsap.from(".ClassCSS", {duration: 1, x: 300, opacity: 0, delay: 0.2, scale: 0.5});
-              gsap.to(".ClassCSS", {
-              duration: 1,
-              x: 0,
-              opacity: 1,
-              delay: 0.8,
-              stagger: 0.2,
-              ease: "expo",
-              force3D: true
-              });
-            } else {
-              setTimeout(function() {
-                gsap.to(".ClassCSS", {duration: 0.2, x: 400, opacity: 0});
-              }, 1500);
-            }
-
-        },
-        afterRender: function(){
-        },
-        afterResize: function(width, height){
-        },
-        afterSlideLoad: function(section, origin, destination, direction){
-            var params = {
-                section: section,
-                origin: origin,
-                destination: destination,
-                direction: direction
-            };
-        },
-        afterLoad: function(origin, destination, direction){
-            var params = {
-                origin: origin,
-                destination: destination,
-                direction: direction
-            };
-            if (params.destination.anchor === "secondPage" && params.destination.index === 1) {
-              // gsap.from(".ClassCSS", {duration: 1, x: 300, opacity: 0, delay: 0.2, scale: 0.5});
-              gsap.to(".ClassCSS", {
-              duration: 1,
-              x: 0,
-              opacity: 1,
-              delay: 0.8,
-              stagger: 0.2,
-              ease: "expo",
-              force3D: true
-              });
-            } else {
-              setTimeout(function() {
-                gsap.to(".ClassCSS", {duration: 0.2, x: 400, opacity: 0});
-              }, 1500);
-            }
-        }
-    });
-    </script>
 
   </body>
 </html>
