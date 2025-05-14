@@ -1,4 +1,3 @@
-import "bootstrap";
 const date1 = new Date().getTime();
 
 ////////////////Fonction déclancheuse du site
@@ -32,8 +31,8 @@ window.addEventListener('load', function (e) {
 })
 
 //VIDEO CALLBACK
-const video = document.querySelector('#section0 video');
-const terminal = document.querySelector('#AboutDevTypeText');
+// const video = document.querySelector('#section0 video');
+// const terminal = document.querySelector('#AboutDevTypeText');
 
 
 //Jouer le son sur la page de garde

@@ -9,6 +9,13 @@ Rails.application.configure do
   # Do not eager load code on boot.
   config.eager_load = false
 
+  config.assets.compile = true
+  config.assets.digest = false
+  
+  # Votre config existante
+  config.assets.debug = false
+  config.assets.quiet = true
+
   # Show full error reports.
   config.consider_all_requests_local = true
 
@@ -51,6 +58,7 @@ Rails.application.configure do
 
   # Suppress logger output for asset requests.
   config.assets.quiet = true
+  
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true

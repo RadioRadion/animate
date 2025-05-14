@@ -19,20 +19,12 @@
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
-    <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
   </head>
 
   <body>
     <div class="cursor"></div>
     <%= yield %>
     <%= javascript_include_tag 'application' %>
-    <%= javascript_pack_tag 'application' %>
-    <%= javascript_pack_tag 'cursor' %>
-    <%= javascript_pack_tag 'gallerie' %>
-    <%= javascript_pack_tag 'terminal' %>
-    <%= javascript_pack_tag 'norefresh' %>
-    <%= javascript_pack_tag 'cinema' %>
-    <%= javascript_pack_tag 'iframe' %>
 
 <!--     //le script à lancer en fin de page
  -->
